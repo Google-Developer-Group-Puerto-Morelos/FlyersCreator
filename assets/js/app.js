@@ -29,6 +29,8 @@ form.addEventListener('submit', function (event) {
     const appendSpeakerName = document.getElementById("speaker");
     const appendEventDate = document.getElementById("dateformat");
 
+    console.log(date);
+
     appendTitle.innerText = title;
     appendSpeakerName.innerText = speaker;
     appendEventDate.innerText = dateTextFormat;
@@ -44,5 +46,5 @@ const dateToString = (date, city) => {
     let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
     const selectedDate = new Date(date);
 
-    return `${selectedDate.getDay()} de ${meses[selectedDate.getMonth()]} a las ${selectedDate.getHours()}:${selectedDate.getMinutes()} hrs, hora de ${city}`;
+    return `${selectedDate.getDate()} de ${meses[selectedDate.getMonth()]} a las ${selectedDate.getHours()}:${selectedDate.getMinutes()} hrs, hora de ${city}`;
 }
