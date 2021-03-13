@@ -92,6 +92,7 @@ display: grid;
 #flyerTheme {
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .theme-owasp {
@@ -160,4 +161,26 @@ display: grid;
     grid-row: 3;
     height: max-content;
     color: var(--backgroundColor-speaker);
+}
+
+.theme-gdg .data-grid {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+}
+
+.theme-gdg #title, .theme-gdg #speaker {
+    grid-column: 1 / -1;
+}
+
+.theme-gdg #hourformat {
+    grid-column: 3 / -1;
+}
+
+.theme-gdg #dayevent, .theme-gdg #monthevent {
+    grid-row: 3;
+    font-size: 24px;
+}
+
+.theme-gdg #monthevent {
+    padding-right: .25rem;
 }
