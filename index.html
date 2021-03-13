@@ -21,6 +21,8 @@
         <div class="mui-row">
             <div class="mui-col-md-4">
                 <div class="sidebar-data mui-panel">
+
+
                     <form id="formflyer" class="mui-form data-flyer">
                         <div class="mui-textfield mui-textfield--float-label">
                             <input type="text" name="title" id="getTitle">
@@ -38,6 +40,13 @@
                             <input type="text" name="city">
                             <label>Ciudad</label>
                         </div>
+                        <div class="mui-select">
+                            <select id="changeTheme">
+                                <option value="gdg">GDG Puerto Morelos</option>
+                                <option value="owasp" selected>OWASP Riviera Maya</option>
+                            </select>
+                            <label>Tema</label>
+                        </div>
                         <button id="createFlyer" type="submit" class="mui-btn mui-btn--raised mui-btn--primary">
                             Generar flyer
                         </button>
@@ -46,38 +55,35 @@
                         onclick="screenshot(getTitleToSave())">
                         Descargar
                     </button>
-
                 </div>
             </div>
             <div class="mui-col-md-8">
                 <div id="flyer">
-                    <main class="flyer-content">
-                        <header class="main-header">
-                            <img width="150"
-                                src="https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-goog/contentbuilder/logo-h_CkUjRgW.svg"
-                                alt="">
-                            <p class="chapter-name">
-                                Puerto Morelos
-                            </p>
-                        </header>
-                        <div class="main-content">
-                            <h1 id="title" class="mui--text-display3">
-                                Título de la charla
-                            </h1>
-                            <h3 id="speaker" class="mui--text-display1">
-                                Nombre del speaker
-                            </h3>
-                            <p id="dateformat" class="mui--text-headline">
-                                DD de MM, a las HH:MM, GMT-5, hora de Ciudad
-                            </p>
+                    <main id="flyerTheme">
+                        <div class="flyer-content">
+                            <div class="main-content">
+                                <div class="container">
+                                    <div class="data-grid">
+                                        <span id="dayevent">
+                                            DD
+                                        </span>
+                                        <span id="monthevent">
+                                            MM
+                                        </span>
+                                        <h1 id="title" class="mui--text-display3">
+                                            Título de la charla
+                                        </h1>
+                                        <h3 id="speaker" class="mui--text-display1">
+                                            Nombre del speaker
+                                        </h3>
+                                        <p id="hourformat" class="mui--text-headline">
+                                            a las hh:mm de Ciudad
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </main>
-                    <footer class="main-footer">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </footer>
                 </div>
             </div>
         </div>

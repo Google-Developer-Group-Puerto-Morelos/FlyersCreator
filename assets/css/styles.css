@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-title: #1a73e8;
+    --backgroundColor-title: transparent;
+    --color-speaker: #123441;
+    --backgroundColor-speaker: transparent;
+    --color-date: #000;
+    --backgroundColor-date: transparent;
+}
+
 body {
     overflow-x: hidden;
     position: fixed;
@@ -12,7 +21,8 @@ body {
 }
 
 .container {
-    margin: 2rem auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* .content-app {
@@ -43,14 +53,21 @@ display: grid;
 }
 
 #title {
-    color: #1a73e8;
+    color: var(--color-title);
+    background-color: var(--backgroundColor-title);
     font-weight: bold;
 }
 
 #speaker {
     margin-top: 0;
-    color: #123441;
+    color: var(--color-speaker);
+    background-color: var(--backgroundColor-speaker);
     text-transform: capitalize;
+}
+
+#dateformat {
+    color: var(--color-date);
+    background-color: var(--backgroundColor-date);
 }
 
 .main-header {
@@ -64,44 +81,83 @@ display: grid;
     margin-top: 5rem;
 }
 
-.chapter-name {
-    margin: 0;
-    color: #676c72;
-    font-weight: 100;
-    margin-left: .4rem;
-}
-
-.main-footer {
-    height: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1.3fr 2fr 5fr;
-}
-
-.main-footer div {
-    height: inherit;
-}
-
-.main-footer div:first-child {
-    background-color: #498AF3;
-}
-
-.main-footer div:nth-child(2) {
-    background-color: #EB4A3E;
-}
-
-.main-footer div:nth-child(3) {
-    background-color: #FABE10;
-}
-
-.main-footer div:last-child {
-    background-color: #48B264;
-}
-
 .flyer-content {
-    padding-left: 2rem;
-    padding-top: 2rem;
+    padding: 10rem 0;
 }
 
 .mui-select__menu>div {
-    color: #1a73e8;
+    color: var(--color-title);
+}
+
+#flyerTheme {
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.theme-owasp {
+    --color-title: #fff;
+    --backgroundColor-title: #A3F144;
+    --color-speaker: #123441;
+    --backgroundColor-speaker: transparent;
+    --color-date: #000;
+    --backgroundColor-date: transparent;
+}
+
+.theme-owasp {
+    --color-title: #fff;
+    --backgroundColor-title: #A3F144;
+    --color-speaker: #123441;
+    --backgroundColor-speaker: #fff;
+    --color-date: #fff;
+    --backgroundColor-date: transparent;
+}
+
+.theme-owasp .data-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: max-content;
+}
+
+.theme-owasp .flyer-content {
+    padding-top: 5rem;
+}
+
+.theme-owasp span#dayevent, .theme-owasp span#monthevent {
+    font-size: 3.8rem;
+    font-weight: bold;
+    justify-self: center;
+    align-self: center;
+}
+
+.theme-owasp span#dayevent {
+    color: var(--backgroundColor-title);
+    align-self: end;
+}
+
+.theme-owasp span#monthevent {
+    color: var( --backgroundColor-speaker);
+    margin-top: -2rem;
+    font-size: 2.5rem;
+}
+
+.theme-owasp #title {
+    grid-column: 2 / -1;
+    grid-row: 1;
+    padding: .2rem .35rem;
+    height: max-content;
+    margin-bottom: .2rem;
+}
+
+.theme-owasp #speaker {
+    grid-column: 2 / -1;
+    grid-row: 2;
+    height: max-content;
+    padding: .35rem;
+}
+
+.theme-owasp #hourformat {
+    grid-column: 2 / -1;
+    grid-row: 3;
+    height: max-content;
+    color: var(--backgroundColor-speaker);
 }
