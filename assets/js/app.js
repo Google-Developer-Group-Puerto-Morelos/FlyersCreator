@@ -36,10 +36,10 @@ const hourToString = (date, city) => {
 const setTheme = (element, theme) => {
     const themes = {
         owasp: {
-            src: "/assets/images/owasp-background.png",
+            src: "./assets/images/owasp-background.png",
         },
         gdg: {
-            src: "/assets/images/gdg-background.png"
+            src: "./assets/images/gdg-background.png"
         }
     }
     element.style.backgroundImage = `url('${themes[theme].src}')`;
@@ -58,6 +58,9 @@ const appendMonthDate = document.getElementById("monthevent");
 const appendHourDate = document.getElementById("hourformat");
 
 
+const host = window.location.host;
+
+
 
 
 form.addEventListener('submit', function (event) {
@@ -71,7 +74,6 @@ form.addEventListener('submit', function (event) {
     appendHourDate.innerText = hourTextFormat;
     appendDayDate.innerText = day;
     appendMonthDate.innerText = month;
-
 
     document.getElementById("getImage").style.display = "block";
 });
