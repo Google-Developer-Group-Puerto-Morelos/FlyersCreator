@@ -13,6 +13,8 @@
     --backgroundColor-date: transparent;
 }
 
+/* #00B452 */
+
 body {
     overflow-x: hidden;
     position: fixed;
@@ -97,7 +99,7 @@ display: grid;
 
 .theme-owasp {
     --color-title: #fff;
-    --backgroundColor-title: #A3F144;
+    --backgroundColor-title: #00B452;
     --color-speaker: #123441;
     --backgroundColor-speaker: transparent;
     --color-date: #000;
@@ -106,7 +108,7 @@ display: grid;
 
 .theme-owasp {
     --color-title: #fff;
-    --backgroundColor-title: #A3F144;
+    --backgroundColor-title: #00B452;
     --color-speaker: #123441;
     --backgroundColor-speaker: #fff;
     --color-date: #fff;
